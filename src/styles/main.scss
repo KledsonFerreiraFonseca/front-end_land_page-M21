@@ -6,12 +6,13 @@
     box-sizing: border-box;
 }
 
-$corDeFundo: rgb(183, 212, 17);
+$corDeFundo: rgb(44, 44, 40);
 $corTextoPrincipal: rgb(214, 45, 45);
 $corTextoSecundario: #f9f9f9;
 
 body {
     background-color: $corDeFundo;
+
 }
 
 
@@ -65,5 +66,5 @@ body {
 
 /*fonte pequena "3"*/
 .title--small {
-    @include title(28px);
+    @include title(20px);
 }
