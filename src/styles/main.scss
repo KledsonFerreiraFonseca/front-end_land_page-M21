@@ -1,5 +1,69 @@
-$bgcColor: rgb(255, 123, 0);
+@use 'hero';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$corDeFundo: rgb(183, 212, 17);
+$corTextoPrincipal: rgb(214, 45, 45);
+$corTextoSecundario: #f9f9f9;
 
 body {
-    background-color: $bgcColor;
+    background-color: $corDeFundo;
+}
+
+
+/*criação de 3 classes de FONTE P/ OS TEXTOS*/
+@mixin text($fontSize: 16px) {/*mixin / text->nome do mixin / $fonteSize->argumento / 16px->tamanho padrão*/
+    font-size: $fontSize;/*font-size -> tamanho da fonte*/
+    line-height: $fontSize + 10px;/*line-height -> altura da linha*/
+    color: $corTextoPrincipal;
+}
+
+/*criação de 3 classes de FONTE P/ OS TÍTULOS*/
+@mixin title ($fontSize: 40px) {/*mixin / text->nome do mixin / $fonteSize->argumento / 28px->tamanho padrão*/
+    @include text($fontSize);
+    color: $corTextoSecundario;
+}
+
+
+/*fonte grande "1"*/
+.text--big {
+    @include text(18px);
+}
+
+/*fonte média "2"*/
+.text {
+    @include text;
+}
+
+/*fonte pequena "3"*/
+.text--small {
+    @include text(12px);
+}
+
+/*criação de 1 classes de fonte para os links*/
+.link-text {
+    @include text(18px);
+    color: $corTextoSecundario;
+    text-decoration: underline;
+}
+
+
+/*criação de 3 classes de FONTE P/ OS TÍTULOS*/
+/*fonte grande "1"*/
+.title--big {
+    @include title(44px);
+}
+
+/*fonte média "2"*/
+.title {
+    @include title;
+}
+
+/*fonte pequena "3"*/
+.title--small {
+    @include title(28px);
 }
