@@ -1,38 +1,41 @@
+@use 'combos';
 @use 'hero';
+@use 'variaveis';
+@use 'available-devices';
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
-$corDeFundo: rgb(44, 44, 40);
-$corTextoPrincipal: rgb(214, 45, 45);
-$corTextoSecundario: #f9f9f9;
+
 
 body {
-    background-color: $corDeFundo;
+    background-color: variaveis.$corDeFundo;
 
 }
 
 
 /*criação de 3 classes de FONTE P/ OS TEXTOS*/
-@mixin text($fontSize: 16px) {/*mixin / text->nome do mixin / $fonteSize->argumento / 16px->tamanho padrão*/
+@mixin text($fontSize: 18px) {/*mixin / text->nome do mixin / $fonteSize->argumento / 16px->tamanho padrão*/
     font-size: $fontSize;/*font-size -> tamanho da fonte*/
     line-height: $fontSize + 10px;/*line-height -> altura da linha*/
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
 }
 
 /*criação de 3 classes de FONTE P/ OS TÍTULOS*/
 @mixin title ($fontSize: 40px) {/*mixin / text->nome do mixin / $fonteSize->argumento / 28px->tamanho padrão*/
     @include text($fontSize);
-    color: $corTextoSecundario;
+    color: variaveis.$corTextoSecundario;
 }
 
 
 /*fonte grande "1"*/
 .text--big {
-    @include text(18px);
+    @include text(20px);
 }
 
 /*fonte média "2"*/
@@ -42,13 +45,13 @@ body {
 
 /*fonte pequena "3"*/
 .text--small {
-    @include text(12px);
+    @include text(15px);
 }
 
 /*criação de 1 classes de fonte para os links*/
 .link-text {
     @include text(18px);
-    color: $corTextoSecundario;
+    color: variaveis.$corTextoSecundario;
     text-decoration: underline;
 }
 
@@ -56,7 +59,7 @@ body {
 /*criação de 3 classes de FONTE P/ OS TÍTULOS*/
 /*fonte grande "1"*/
 .title--big {
-    @include title(44px);
+    @include title(50px);
 }
 
 /*fonte média "2"*/
@@ -66,5 +69,5 @@ body {
 
 /*fonte pequena "3"*/
 .title--small {
-    @include title(20px);
+    @include title(25px);
 }
