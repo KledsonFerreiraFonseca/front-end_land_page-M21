@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'variaveis';
 @use 'available-devices';
+@use 'footer';
 
 
 *{
@@ -27,9 +28,10 @@ body {
 }
 
 /*criação de 3 classes de FONTE P/ OS TÍTULOS*/
-@mixin title ($fontSize: 40px) {/*mixin / text->nome do mixin / $fonteSize->argumento / 28px->tamanho padrão*/
+@mixin title ($fontSize: 30px) {/*mixin / text->nome do mixin / $fonteSize->argumento / 28px->tamanho padrão*/
     @include text($fontSize);
     color: variaveis.$corTextoSecundario;
+    
 }
 
 
@@ -69,5 +71,5 @@ body {
 
 /*fonte pequena "3"*/
 .title--small {
-    @include title(25px);
+    @include title(20px);
 }

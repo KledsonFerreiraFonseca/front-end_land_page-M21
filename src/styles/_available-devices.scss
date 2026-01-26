@@ -1,9 +1,11 @@
+@use 'variaveis';
+
 .available-devices {
     padding: 5.6vw;
 
     h2 {
         text-align: center;
-        border-bottom: 5px solid rgb(231, 193, 24);
+        border-bottom: 5px solid variaveis.$corTextoterciario;
         padding-bottom: 5px;
     }
 
