@@ -1,14 +1,15 @@
 @use 'variaveis';
 
 .combos {
-    padding: 3.6vw;
-    text-align: center;
+    padding: 2vw 5.6vw;
+    
     
 
     h2 {
         color: variaveis.$corTextoSecundario;
         border-bottom: 5px solid variaveis.$corTextoterciario;
         padding-bottom: 5px;
+        text-align: center;
     }
 
     &__list {
