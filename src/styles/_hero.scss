@@ -7,8 +7,16 @@
     background-repeat: no-repeat;//não repetição da imagem
     background-position: center;
 
+
+
+    
     img {
         width: 50vw;
+    }
+
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
     }
 
     &__content {

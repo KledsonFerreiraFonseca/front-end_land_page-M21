@@ -4,6 +4,7 @@
 @use 'available-devices';
 @use 'footer';
 @use 'shows';
+@use 'header';
 
 
 *{
@@ -13,8 +14,6 @@
     list-style: none;
     
 }
-
-
 
 body {
     background-color: variaveis.$corDeFundo;

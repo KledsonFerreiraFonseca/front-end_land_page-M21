@@ -1,0 +1,83 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;//para o header ficar fixo no topo
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo;
+    transition: background-color .5s ease;//transição suave para o efeito de esconder
+    z-index: 1;
+
+    &--is-hidden {//classe para esconder o header
+        background-color: transparent;
+        transition: background-color .5s ease;
+
+        .header__logo {
+            opacity: 0;
+            transition: opacity .5s ease;
+        }
+    }
+
+    &__container {
+        padding: 5px 5px;
+        display: flex;
+        justify-content: space-between;
+
+        
+    }
+
+    &__logo {
+        max-width: 100px;
+        width: 100%;
+        margin: 5px;
+        transition: opacity .5s ease;//transição suave para o efeito de esconder
+    }
+
+    &__links {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+    
+        
+        
+    }
+    
+    .button {
+        padding: 1vw 1vw;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: variaveis.$corDosBotoes;
+        font-size: 15px;
+        text-decoration: none;
+        letter-spacing: 1px;//espaçamento entre letras
+        color: variaveis.$corTextoTerciario;
+        text-transform: uppercase;
+        border: 1px solid variaveis.$corDeFundo;
+        
+
+        &--assine {
+            background-color: variaveis.$corDeFundoBotaoAssine;
+            border-color: variaveis.$corDeFundo;
+
+            &:hover {
+                background-color: adjust-color(variaveis.$corDeFundoBotaoAssine, $lightness: 50%);
+            }
+        }
+
+        &--login {
+            background-color: rgba(variaveis.$corDeFundoBotaoLogin, 0.8);
+            color: variaveis.$corTextoSecundario;
+            border-color: variaveis.$corTextoSecundario;
+
+            &:hover {
+                background-color: variaveis.$corTextoSecundario;
+                color: variaveis.$corDeFundo;
+            }
+        }
+    }
+}
+
