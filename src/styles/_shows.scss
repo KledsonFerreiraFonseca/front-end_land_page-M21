@@ -16,6 +16,10 @@
         gap: 18px;
         padding-top: 15px;
 
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         &__item {
             img {
                 width: 100%;

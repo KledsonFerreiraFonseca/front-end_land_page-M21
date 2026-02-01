@@ -15,6 +15,7 @@
         .header__logo {
             opacity: 0;
             transition: opacity .5s ease;
+
         }
     }
 
@@ -23,7 +24,9 @@
         display: flex;
         justify-content: space-between;
 
-        
+        @media (max-width: 768px) {
+            padding: 0 12px;
+        }
     }
 
     &__logo {
@@ -31,6 +34,10 @@
         width: 100%;
         margin: 5px;
         transition: opacity .5s ease;//transição suave para o efeito de esconder
+
+        @media (max-width: 768px) {
+            max-width: 80px;
+        }
     }
 
     &__links {
@@ -41,9 +48,6 @@
         align-items: center;
         justify-content: center;
         margin: 5px;
-    
-        
-        
     }
     
     .button {
@@ -57,6 +61,9 @@
         color: variaveis.$corTextoTerciario;
         text-transform: uppercase;
         border: 1px solid variaveis.$corDeFundo;
+        height: 50px;
+
+
         
 
         &--assine {
@@ -77,6 +84,12 @@
                 background-color: variaveis.$corTextoSecundario;
                 color: variaveis.$corDeFundo;
             }
+        }
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+            padding: 10px 11px;
+            letter-spacing: 0;
         }
     }
 }
